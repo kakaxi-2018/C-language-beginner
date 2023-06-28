@@ -47,6 +47,7 @@ enum Day
     Mon = 1, Tue, Wed, Thu, Fri, Sat=100, Sun
 };
 
+// enum
 int main2()
 {
     printf("%d, %d, %d, %d, %d, %d, %d\n",
@@ -72,7 +73,7 @@ struct _stu
 } Stu;
 
 // the size of struct
-int main()
+int main3()
 {
     struct _stu s1;
     printf("sizeof(s1) = %d, sizeof(Stu) = %d\n", sizeof(s1), sizeof(Stu)) ;
@@ -80,6 +81,16 @@ int main()
     //printf("&a = %p, &b = %p, &c = %p\n", &s1.a, &s1.b, &s1.c);
     //printf("&a = %p, &b = %p, &c = %p, &arr = %p\n", &s1.a, &s1.b, &s1.c, &s1.arr);
     printf("&a = %p, &b = %p, &c = %p, &inf.m = %p, &inf.n = %p\n", &s1.a, &s1.b, &s1.c, &s1.inf.m, &s1.inf.n);
+
+    return 0;
+}
+
+// interpret the contents of the memory
+int main()
+{
+    int data = 0xffffffff;
+    printf("%d\n", data);  // -1
+    printf("%u\n", data);  // 2^31-1
 
     return 0;
 }
